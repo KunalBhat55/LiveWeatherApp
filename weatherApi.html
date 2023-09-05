@@ -2,65 +2,94 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather API</title>
     <style>
       body {
-        background: radial-gradient(
-          circle,
-          rgb(211, 141, 171) 0%,
-          rgba(148, 187, 233, 1) 100%
-        );
-      }
-      .container {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("/images/img4.jpg");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        margin-top: 60px;
       }
-      button {
-        font-weight: bold;
-        font-family: cambria;
-        height: 35px;
-        width: 65px;
-        font-size: 1.1rem;
-        border: none;
-        background-color: azure;
-        border-radius: 5px;
-      }
-      #cityName {
-        padding: 5px;
-        border: 2px solid;
-        margin-top: 10px;
-        height: 1.2rem;
-        width: 18%;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-      label {
-        font-weight: bold;
-        font-size: 1.5rem;
-        font-family: Cambria, serif;
-        
-      }
-      h1 {
-        color: rgb(23, 35, 51);
+
+      .container {
         text-align: center;
-        font-family: cambria;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-bottom: 2px solid #007bff;
+        border-radius: 0;
+        width: 300px;
+        outline: none;
+        transition: border-bottom 0.3s;
+      }
+
+      input[type="text"]:focus {
+        border-bottom: 2px solid #0056b3;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+      @media (max-width: 668px) {
+        .container {
+          margin: auto 5%;
+        }
+      }
+      @media (max-width: 380px) {
+        .container, #cityName {
+          width: 80%;
+        }
+        h1{
+          font-size: 1.5rem;
+        }
+      }
+      @media (max-width: 578px) {
+        button {
+          margin-top: 5%;
+        }
+        
       }
     </style>
   </head>
 
   <body>
-    <h1>Welcome To Weather Report By Kunal</h1>
-    <form action="/" method="post">
-
-      <div class="container">
-        <label for="cityName">Enter city name</label>
+    <div class="container">
+      <h1>Live Weather App</h1>
+      <form action="/" method="post">
         <input id="cityName" type="text" name="cityName" placeholder="City Name"/>
 
-        <button type="submit">Go</button>
-      </div>
-
-    </form>
+        <button type="submit">Get Weather</button>
+      </form>
+    </div>
   </body>
 </html>

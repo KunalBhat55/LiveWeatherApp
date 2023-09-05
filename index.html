@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/images/img4.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-bottom: 2px solid #007BFF;
+            border-radius: 0;
+            width: 300px;
+            outline: none;
+            transition: border-bottom 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-bottom: 2px solid #0056b3;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width:668px) {
+
+            .container{
+                margin: auto 5%;
+            }
+            
+        }
+        @media (max-width:578px) {
+
+          button{
+            margin-top: 5%;
+          }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Live Weather App</h1>
+        <form>
+            <input type="text" placeholder="Enter city name" name="cityName" id="cityName">
+            <button type="submit">Get Weather</button>
+        </form>
+    </div>
+</body>
+</html>
