@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather API</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle,
+          rgb(211, 141, 171) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+      }
+      button {
+        font-weight: bold;
+        font-family: cambria;
+        height: 35px;
+        width: 65px;
+        font-size: 1.1rem;
+        border: none;
+        background-color: azure;
+        border-radius: 5px;
+      }
+      #cityName {
+        padding: 5px;
+        border: 2px solid;
+        margin-top: 10px;
+        height: 1.2rem;
+        width: 18%;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+      label {
+        font-weight: bold;
+        font-size: 1.5rem;
+        font-family: Cambria, serif;
+        
+      }
+      h1 {
+        color: rgb(23, 35, 51);
+        text-align: center;
+        font-family: cambria;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome To Weather Report By Kunal</h1>
+    <form action="/" method="post">
+
+      <div class="container">
+        <label for="cityName">Enter city name</label>
+        <input id="cityName" type="text" name="cityName" placeholder="City Name"/>
+
+        <button type="submit">Go</button>
+      </div>
+
+    </form>
+  </body>
+</html>
